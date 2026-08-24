@@ -1,11 +1,327 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Imobiliaria</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Âncora Imóveis — Comprar, alugar e anunciar imóveis</title>
+<meta name="description" content="Imobiliária com 27 anos de mercado. Compre, alugue ou anuncie seu imóvel com quem entende do seu bairro.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    
+
+<div class="topbar">
+  <div class="container">
+    <div class="topbar__links">
+      <a href="tel:+551140028922">(11) 4002-8922</a> · <a href="mailto:contato@ancoraimoveis.com.br">contato@ancoraimoveis.com.br</a>
+    </div>
+    <div class="topbar__seal">CRECI-J 24.681 · Atendimento seg–sáb, 8h–19h</div>
+  </div>
+</div>
+
+<header class="header">
+  <div class="container">
+    <a href="index.html" class="brand">
+      <span class="brand__mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="color:#e3cd94"><circle cx="12" cy="5" r="1.6"/><path d="M12 7v13"/><path d="M6 12H4a8 8 0 0 0 8 9 8 8 0 0 0 8-9h-2"/><path d="M8 9h8"/></svg></span>
+      <span class="brand__text">
+        <span class="brand__name">Âncora Imóveis</span>
+        <span class="brand__tag">Desde 1998 · sua âncora no mercado</span>
+      </span>
+    </a>
+
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <nav class="nav">
+      <a href="index.html" class="is-active">Início</a>
+      <a href="comprar.html">Comprar</a>
+      <a href="alugar.html">Alugar</a>
+      <a href="anunciar.html">Anunciar meu imóvel</a>
+      <a href="sobre.html">Sobre</a>
+      <a href="anunciar.html#contato" class="btn btn-outline-navy btn-sm">Fale com um corretor</a>
+    </nav>
+    <label for="nav-toggle" class="nav-toggle-btn" aria-label="Abrir menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </label>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container hero__inner">
+    <div>
+      <span class="eyebrow">Imobiliária boutique · 27 anos de bairro</span>
+      <h1>O endereço certo é o começo de uma <em>história boa</em>.</h1>
+      <p class="hero__lead">Compramos, vendemos e alugamos imóveis nos bairros que conhecemos de verdade. Sem enrolação, sem letra miúda — só o imóvel certo, no seu tempo.</p>
+
+      <div class="hero__stats">
+        <div class="hero__stat"><b>27 anos</b><span>de mercado</span></div>
+        <div class="hero__stat"><b>1.240+</b><span>negócios fechados</span></div>
+        <div class="hero__stat"><b>4,9/5</b><span>avaliação dos clientes</span></div>
+      </div>
+
+      <div class="hero__actions">
+        <a href="comprar.html" class="btn btn-primary">Ver imóveis à venda</a>
+        <a href="alugar.html" class="btn btn-outline">Ver imóveis para alugar</a>
+      </div>
+    </div>
+
+    <div class="hero__panel">
+      <h3>Buscar imóvel</h3>
+      <p>Filtre por finalidade e categoria — sem espera, sem cadastro.</p>
+      <form class="quicksearch" action="comprar.html" method="get">
+        <select name="finalidade" aria-label="Finalidade">
+          <option>Comprar</option>
+          <option>Alugar</option>
+        </select>
+        <select name="tipo" aria-label="Tipo de imóvel">
+          <option value="">Qualquer tipo</option>
+          <option value="casa">Casa</option>
+          <option value="apartamento">Apartamento</option>
+          <option value="comercial">Comercial</option>
+        </select>
+        <button type="submit" class="btn btn-primary" style="grid-column:1/-1">Buscar imóveis</button>
+      </form>
+      <div class="hero__badge-row">
+        <span class="mini-seal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3Z"/><path d="M9 12l2 2 4-4"/></svg> Imóveis vistoriados</span>
+        <span class="mini-seal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h4l2 5-2.5 2a12 12 0 0 0 5.5 5.5l2-2.5 5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 2 6a2 2 0 0 1 2-2Z"/></svg> Corretor dedicado</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="trustbar">
+  <div class="container">
+    <div class="trustbar__item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3Z"/></svg>
+      <div><b>27 anos</b><span>Fundada em 1998</span></div>
+    </div>
+    <div class="trustbar__item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v9h14v-9"/></svg>
+      <div><b>180+</b><span>imóveis na carteira</span></div>
+    </div>
+    <div class="trustbar__item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>
+      <div><b>9 corretores</b><span>com CRECI ativo</span></div>
+    </div>
+    <div class="trustbar__item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9L12 3Z"/></svg>
+      <div><b>4,9 / 5</b><span>em 620 avaliações</span></div>
+    </div>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head section-head--split">
+      <div>
+        <span class="eyebrow">Seleção da semana</span>
+        <h2>Imóveis em destaque</h2>
+        <p>Uma curadoria dos imóveis com maior procura nos últimos 7 dias.</p>
+      </div>
+      <a href="comprar.html" class="btn btn-outline-navy">Ver todos os imóveis</a>
+    </div>
+
+    <div class="grid grid--3">
+
+      <article class="card">
+        <span class="card__tab">Venda · Casa</span>
+        <a href="imovel.html" class="card__photo ph-1">
+          <span class="card__status">Novo</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v9a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1v-9"/></svg>
+        </a>
+        <div class="card__body">
+          <div class="card__price">R$ 890.000 <small>Cód. AN-1042</small></div>
+          <div class="card__title">Casa térrea com quintal</div>
+          <div class="card__loc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-6.1-7-11.5A7 7 0 0 1 19 9.5C19 14.9 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.3"/></svg> Jardim das Acácias, Sorocaba</div>
+          <div class="card__meta">
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 18v-6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v6"/><path d="M3 18v2M21 18v2"/></svg> 3 qts</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="12" width="18" height="6" rx="2"/><path d="M5 12 6.5 7A2 2 0 0 1 8.4 5.5h7.2A2 2 0 0 1 17.5 7L19 12"/></svg> 2 vagas</span>
+            <span>150 m²</span>
+          </div>
+        </div>
+        <div class="card__cta"><a href="imovel.html" class="btn btn-outline-navy btn-block btn-sm">Ver detalhes</a></div>
+      </article>
+
+      <article class="card">
+        <span class="card__tab">Venda · Apartamento</span>
+        <a href="imovel.html" class="card__photo ph-2">
+          <span class="card__status">Destaque</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M8 7h1M12 7h1M16 7h1M8 11h1M12 11h1M16 11h1M8 15h1M12 15h1M16 15h1"/></svg>
+        </a>
+        <div class="card__body">
+          <div class="card__price">R$ 620.000 <small>Cód. AN-0998</small></div>
+          <div class="card__title">Apartamento 3 quartos, vista livre</div>
+          <div class="card__loc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-6.1-7-11.5A7 7 0 0 1 19 9.5C19 14.9 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.3"/></svg> Jardim das Flores, Sorocaba</div>
+          <div class="card__meta">
+            <span>3 qts</span>
+            <span>1 vaga</span>
+            <span>92 m²</span>
+          </div>
+        </div>
+        <div class="card__cta"><a href="imovel.html" class="btn btn-outline-navy btn-block btn-sm">Ver detalhes</a></div>
+      </article>
+
+      <article class="card">
+        <span class="card__tab">Aluguel · Comercial</span>
+        <a href="imovel.html" class="card__photo ph-4">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M10 21v-4h4v4"/></svg>
+        </a>
+        <div class="card__body">
+          <div class="card__price">R$ 4.900<small>/mês · Cód. AN-0876</small></div>
+          <div class="card__title">Sala comercial térrea, 2 ambientes</div>
+          <div class="card__loc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-6.1-7-11.5A7 7 0 0 1 19 9.5C19 14.9 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.3"/></svg> Centro, Sorocaba</div>
+          <div class="card__meta">
+            <span>2 amb.</span>
+            <span>1 vaga</span>
+            <span>68 m²</span>
+          </div>
+        </div>
+        <div class="card__cta"><a href="imovel.html" class="btn btn-outline-navy btn-block btn-sm">Ver detalhes</a></div>
+      </article>
+
+      <article class="card">
+        <span class="card__tab">Venda · Apartamento</span>
+        <a href="imovel.html" class="card__photo ph-3">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M8 7h1M12 7h1M16 7h1M8 11h1M12 11h1M16 11h1"/></svg>
+        </a>
+        <div class="card__body">
+          <div class="card__price">R$ 410.000 <small>Cód. AN-1101</small></div>
+          <div class="card__title">Studio mobiliado próximo ao metrô</div>
+          <div class="card__loc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-6.1-7-11.5A7 7 0 0 1 19 9.5C19 14.9 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.3"/></svg> Vila Progresso, Sorocaba</div>
+          <div class="card__meta">
+            <span>1 qt</span>
+            <span>1 vaga</span>
+            <span>38 m²</span>
+          </div>
+        </div>
+        <div class="card__cta"><a href="imovel.html" class="btn btn-outline-navy btn-block btn-sm">Ver detalhes</a></div>
+      </article>
+
+      <article class="card">
+        <span class="card__tab">Aluguel · Casa</span>
+        <a href="imovel.html" class="card__photo ph-5">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v9a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1v-9"/></svg>
+        </a>
+        <div class="card__body">
+          <div class="card__price">R$ 2.850<small>/mês · Cód. AN-0954</small></div>
+          <div class="card__title">Casa em condomínio fechado</div>
+          <div class="card__loc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-6.1-7-11.5A7 7 0 0 1 19 9.5C19 14.9 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.3"/></svg> Parque Campolim, Sorocaba</div>
+          <div class="card__meta">
+            <span>2 qts</span>
+            <span>2 vagas</span>
+            <span>110 m²</span>
+          </div>
+        </div>
+        <div class="card__cta"><a href="imovel.html" class="btn btn-outline-navy btn-block btn-sm">Ver detalhes</a></div>
+      </article>
+
+      <article class="card">
+        <span class="card__tab">Venda · Comercial</span>
+        <a href="imovel.html" class="card__photo ph-1">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M10 21v-4h4v4"/></svg>
+        </a>
+        <div class="card__body">
+          <div class="card__price">R$ 1.150.000 <small>Cód. AN-0812</small></div>
+          <div class="card__title">Galpão logístico com pé-direito alto</div>
+          <div class="card__loc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-6.1-7-11.5A7 7 0 0 1 19 9.5C19 14.9 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.3"/></svg> Distrito Industrial, Sorocaba</div>
+          <div class="card__meta">
+            <span>4 vagas</span>
+            <span>520 m²</span>
+          </div>
+        </div>
+        <div class="card__cta"><a href="imovel.html" class="btn btn-outline-navy btn-block btn-sm">Ver detalhes</a></div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section class="section section--muted">
+  <div class="container">
+    <div class="section-head text-center" style="margin-left:auto;margin-right:auto;text-align:center">
+      <span class="eyebrow" style="justify-content:center">Como funciona</span>
+      <h2>Por que negociar com a Âncora</h2>
+    </div>
+    <div class="grid grid--3">
+      <div style="text-align:center">
+        <div class="seal" style="margin:0 auto 18px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3Z"/><path d="M9 12l2 2 4-4"/></svg></div>
+        <h3>Curadoria criteriosa</h3>
+        <p>Visitamos e vistoriamos cada imóvel antes de publicar. Nada de foto antiga ou informação incompleta.</p>
+      </div>
+      <div style="text-align:center">
+        <div class="seal" style="margin:0 auto 18px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 4h4l2 5-2.5 2a12 12 0 0 0 5.5 5.5l2-2.5 5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 2 6a2 2 0 0 1 2-2Z"/></svg></div>
+        <h3>Negociação sem enrolação</h3>
+        <p>Um corretor só, do primeiro contato até a assinatura. Você não fica repetindo sua história pra ninguém.</p>
+      </div>
+      <div style="text-align:center">
+        <div class="seal" style="margin:0 auto 18px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="8" cy="15" r="4"/><path d="M11 12 20 3"/><path d="M16 7l3 3"/></svg></div>
+        <h3>Suporte pós-chave</h3>
+        <p>Vistoria de entrega, ajuda com contrato de imobiliária/condomínio e indicação de prestadores de confiança.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="cta-band">
+      <div>
+        <span class="badge-gold">Tem um imóvel parado?</span>
+        <h3>Anuncie com quem já negociou mais de 1.200 imóveis na região.</h3>
+        <p>Avaliação gratuita e resposta em até 1 dia útil.</p>
+      </div>
+      <a href="anunciar.html" class="btn btn-primary">Quero anunciar meu imóvel</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <a href="index.html" class="brand" style="margin-bottom:14px;display:flex">
+          <span class="brand__mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" style="color:#e3cd94"><circle cx="12" cy="5" r="1.6"/><path d="M12 7v13"/><path d="M6 12H4a8 8 0 0 0 8 9 8 8 0 0 0 8-9h-2"/><path d="M8 9h8"/></svg></span>
+          <span class="brand__text">
+            <span class="brand__name">Âncora Imóveis</span>
+            <span class="brand__tag">CRECI-J 24.681</span>
+          </span>
+        </a>
+        <p>Imobiliária de bairro com estrutura completa: compra, venda, locação e administração de imóveis em Sorocaba e região desde 1998.</p>
+      </div>
+      <div>
+        <h5>Navegação</h5>
+        <ul>
+          <li><a href="comprar.html">Comprar</a></li>
+          <li><a href="alugar.html">Alugar</a></li>
+          <li><a href="anunciar.html">Anunciar imóvel</a></li>
+          <li><a href="sobre.html">Sobre a imobiliária</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Categorias</h5>
+        <ul>
+          <li><a href="comprar.html#tab-casa">Casas à venda</a></li>
+          <li><a href="comprar.html#tab-apto">Apartamentos à venda</a></li>
+          <li><a href="comprar.html#tab-comercial">Salas comerciais</a></li>
+          <li><a href="alugar.html">Imóveis para alugar</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Contato</h5>
+        <ul>
+          <li><a href="tel:+551140028922">(11) 4002-8922</a></li>
+          <li><a href="https://wa.me/5511940028922">WhatsApp (11) 94002-8922</a></li>
+          <li><a href="mailto:contato@ancoraimoveis.com.br">contato@ancoraimoveis.com.br</a></li>
+          <li>Rua das Palmeiras, 482 — Centro, Sorocaba/SP</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2026 Âncora Imóveis. Todos os direitos reservados.</span>
+      <span>CRECI-J 24.681-SP</span>
+    </div>
+  </div>
+</footer>
+
+<script src="../script/main.js"></script>
 </body>
 </html>
