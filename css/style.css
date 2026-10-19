@@ -178,7 +178,7 @@ button{font-family:inherit}
 }
 .mini-seal svg{width:14px;height:14px;color:var(--gold-300)}
 
-/* Busca rápida (sem JS: leva à página com âncora de categoria) */
+/* Busca rápida */
 .quicksearch{
   margin-top:22px;background:var(--white);border-radius:var(--radius-m);
   padding:18px;display:grid;grid-template-columns:1fr 1fr auto;gap:10px;
@@ -231,7 +231,7 @@ button{font-family:inherit}
 .ph-4{background:linear-gradient(135deg,#0b2140,#08172c)}
 .ph-5{background:linear-gradient(135deg,#4a7bb0,#2a5688)}
 
-/* As fotos de imóveis, galeria e equipe devem ocupar todo o espaço do card */
+/* As fotos de imóveis, galeria e equipe */
 .card__photo img,
 .dgallery__slide img,
 .dgallery__thumbs label img,
@@ -471,9 +471,6 @@ button{font-family:inherit}
 }
 .divider{height:1px;background:var(--gray-200);margin:40px 0}
 
-/* =========================================================
-   Adaptative / Responsivo
-   ========================================================= */
 @media (max-width:1020px){
   .hero__inner{grid-template-columns:1fr}
   .hero__panel{order:-1}
