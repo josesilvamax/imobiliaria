@@ -46,26 +46,41 @@
 
     <!-- Galeria (sem JavaScript: troca de foto via inputs radio) -->
     <div class="dgallery">
-      <input placeholder="teste1" type="radio" name="dg" id="dg1" checked >
-      <input placeholder="teste2" type="radio" name="dg" id="dg2">
-      <input placeholder="teste3" type="radio" name="dg" id="dg3">
-      <input placeholder="teste4" type="radio" name="dg" id="dg4">
-      <input placeholder="teste5" type="radio" name="dg" id="dg5">
+      <input placeholder="1" type="radio" name="dg" id="dg1" checked>
+      <input placeholder="2" type="radio" name="dg" id="dg2">
+      <input placeholder="3" type="radio" name="dg" id="dg3">
+      <input placeholder="4" type="radio" name="dg" id="dg4">
+      <input placeholder="5" type="radio" name="dg" id="dg5">
 
       <div class="dgallery__main">
-        <div class="dgallery__slide slide-1 card__photo ph-2"><span class="card__status">Destaque</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" style="width:20%"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M8 7h1M12 7h1M16 7h1M8 11h1M12 11h1M16 11h1"/></svg></div>
-        <div class="dgallery__slide slide-2 card__photo ph-3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" style="width:20%"><path d="M3 18v-6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v6"/><path d="M3 18v2M21 18v2"/></svg></div>
-        <div class="dgallery__slide slide-3 card__photo ph-4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" style="width:20%"><rect x="4" y="12" width="16" height="6" rx="2"/></svg></div>
-        <div class="dgallery__slide slide-4 card__photo ph-5"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" style="width:20%"><path d="M4 12h16v3a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4v-3Z"/><path d="M7 12V6a2 2 0 0 1 3-1.7"/></svg></div>
-        <div class="dgallery__slide slide-5 card__photo ph-1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" style="width:20%"><path d="M12 21s-7-6.1-7-11.5A7 7 0 0 1 19 9.5C19 14.9 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.3"/></svg></div>
+        <div class="dgallery__slide slide-1 card__photo ph-2"><span class="card__status">Destaque</span>
+          <img src="images/imoveis/AN-0998-1-fachada.jpg" alt="Fachada do prédio do apartamento AN-0998, Jardim das Flores">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" style="width:20%"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M8 7h1M12 7h1M16 7h1M8 11h1M12 11h1M16 11h1"/></svg>
+        </div>
+        <div class="dgallery__slide slide-2 card__photo ph-3">
+          <img src="images/imoveis/AN-0998-2-sala.jpg" alt="Sala de estar em dois ambientes com sacada">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" style="width:20%"><path d="M3 18v-6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v6"/><path d="M3 18v2M21 18v2"/></svg>
+        </div>
+        <div class="dgallery__slide slide-3 card__photo ph-4">
+          <img src="images/imoveis/AN-0998-3-quarto.jpg" alt="Quarto principal com armário embutido">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" style="width:20%"><rect x="4" y="12" width="16" height="6" rx="2"/></svg>
+        </div>
+        <div class="dgallery__slide slide-4 card__photo ph-5">
+          <img src="images/imoveis/AN-0998-4-cozinha.jpg" alt="Cozinha planejada">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" style="width:20%"><path d="M4 12h16v3a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4v-3Z"/><path d="M7 12V6a2 2 0 0 1 3-1.7"/></svg>
+        </div>
+        <div class="dgallery__slide slide-5 card__photo ph-1">
+          <img src="images/imoveis/AN-0998-5-banheiro.jpg" alt="Banheiro social">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" style="width:20%"><path d="M12 21s-7-6.1-7-11.5A7 7 0 0 1 19 9.5C19 14.9 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.3"/></svg>
+        </div>
       </div>
 
       <div class="dgallery__thumbs">
-        <label for="dg1" class="card__photo ph-2" style="border-radius:6px"></label>
-        <label for="dg2" class="card__photo ph-3" style="border-radius:6px"></label>
-        <label for="dg3" class="card__photo ph-4" style="border-radius:6px"></label>
-        <label for="dg4" class="card__photo ph-5" style="border-radius:6px"></label>
-        <label for="dg5" class="card__photo ph-1" style="border-radius:6px"></label>
+        <label for="dg1" class="card__photo ph-2" style="border-radius:6px"><img src="images/imoveis/AN-0998-1-fachada.jpg" alt=""></label>
+        <label for="dg2" class="card__photo ph-3" style="border-radius:6px"><img src="images/imoveis/AN-0998-2-sala.jpg" alt=""></label>
+        <label for="dg3" class="card__photo ph-4" style="border-radius:6px"><img src="images/imoveis/AN-0998-3-quarto.jpg" alt=""></label>
+        <label for="dg4" class="card__photo ph-5" style="border-radius:6px"><img src="images/imoveis/AN-0998-4-cozinha.jpg" alt=""></label>
+        <label for="dg5" class="card__photo ph-1" style="border-radius:6px"><img src="images/imoveis/AN-0998-5-banheiro.jpg" alt=""></label>
       </div>
     </div>
 
@@ -121,7 +136,7 @@
           <div class="card__price">R$ 620.000</div>
           <p style="color:var(--gray-500);font-size:.82rem;margin-bottom:18px">Aceita financiamento · condomínio R$ 480/mês · IPTU R$ 1.900/ano</p>
 
-          <form action="#interesse" method="post">
+          <form class="js-lead-form" action="mailto:contato@ancoraimoveis.com.br" method="post" enctype="text/plain" data-intro="Tenho interesse no imóvel Apartamento 3 quartos, Jardim das Flores (Cód. AN-0998)">
             <div class="field" style="margin-bottom:12px">
               <label for="nome">Nome completo</label>
               <input type="text" id="nome" name="nome" placeholder="Como podemos te chamar" required>
@@ -200,7 +215,7 @@
         <p>Imobiliária de bairro com estrutura completa: compra, venda, locação e administração de imóveis em Sorocaba e região desde 1998.</p>
       </div>
       <div><h5>Navegação</h5><ul><li><a href="comprar.html">Comprar</a></li><li><a href="alugar.html">Alugar</a></li><li><a href="anunciar.html">Anunciar imóvel</a></li><li><a href="sobre.html">Sobre a imobiliária</a></li></ul></div>
-      <div><h5>Categorias</h5><ul><li><a href="comprar.html#tab-casa">Casas à venda</a></li><li><a href="comprar.html#tab-apto">Apartamentos à venda</a></li><li><a href="comprar.html#tab-comercial">Salas comerciais</a></li><li><a href="alugar.html">Imóveis para alugar</a></li></ul></div>
+      <div><h5>Categorias</h5><ul><li><a href="comprar.html#cat-casa">Casas à venda</a></li><li><a href="comprar.html#cat-apto">Apartamentos à venda</a></li><li><a href="comprar.html#cat-comercial">Salas comerciais</a></li><li><a href="alugar.html">Imóveis para alugar</a></li></ul></div>
       <div><h5>Contato</h5><ul><li><a href="tel:+551140028922">(11) 4002-8922</a></li><li><a href="https://wa.me/5511940028922">WhatsApp (11) 94002-8922</a></li><li><a href="mailto:contato@ancoraimoveis.com.br">contato@ancoraimoveis.com.br</a></li><li>Rua das Palmeiras, 482 — Centro, Sorocaba/SP</li></ul></div>
     </div>
     <div class="footer__bottom"><span>© 2026 Âncora Imóveis. Todos os direitos reservados.</span><span>CRECI-J 24.681-SP</span></div>
