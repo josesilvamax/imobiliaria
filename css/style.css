@@ -16,12 +16,12 @@
   --gold-600:#a9822e;
   --ok:#2f7a4f;
 
-  /* Tipografia */
+  
   --f-display:"Fraunces", Georgia, "Times New Roman", serif;
   --f-body:"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --f-mono:"IBM Plex Mono", "Courier New", monospace;
 
-  /* Escala */
+  
   --radius-s:4px;
   --radius-m:10px;
   --shadow-card:0 1px 2px rgba(11,33,64,.06), 0 8px 24px -12px rgba(11,33,64,.18);
@@ -74,7 +74,7 @@ button{font-family:inherit}
 .section--navy .section-head p{color:var(--gray-200)}
 .section-head--split{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap}
 
-/* ---------- Botões ---------- */
+/* Parte de Botões*/
 .btn{
   display:inline-flex;align-items:center;justify-content:center;gap:8px;
   padding:13px 26px;border-radius:2px;font-weight:600;font-size:.94rem;
@@ -90,7 +90,7 @@ button{font-family:inherit}
 .btn-block{width:100%}
 .btn-sm{padding:9px 16px;font-size:.82rem}
 
-/* ---------- Cabeçalho ---------- */
+/* Cabeçalho */
 .topbar{
   background:var(--navy-950);color:var(--gray-200);font-size:.78rem;
   font-family:var(--f-mono);
@@ -134,7 +134,7 @@ button{font-family:inherit}
 .nav-toggle{display:none}
 .nav-toggle-btn{display:none}
 
-/* ---------- Hero ---------- */
+
 .hero{
   position:relative;
   background:
@@ -190,7 +190,7 @@ button{font-family:inherit}
 }
 .quicksearch .btn{width:100%}
 
-/* ---------- Ficha de imóvel (card assinatura) ---------- */
+/* Ficha de imóvel*/
 .grid{display:grid;gap:26px}
 .grid--3{grid-template-columns:repeat(3,1fr)}
 .grid--2{grid-template-columns:repeat(2,1fr)}
@@ -231,16 +231,14 @@ button{font-family:inherit}
 .ph-4{background:linear-gradient(135deg,#0b2140,#08172c)}
 .ph-5{background:linear-gradient(135deg,#4a7bb0,#2a5688)}
 
-/* Quando você adicionar uma <img> real dentro de .card__photo, .dgallery__slide,
-   .dgallery__thumbs label ou .team__photo, ela preenche todo o espaço sem
-   esticar nem cortar de forma estranha. */
+/* As fotos de imóveis, galeria e equipe devem ocupar todo o espaço do card */
 .card__photo img,
 .dgallery__slide img,
 .dgallery__thumbs label img,
 .team__photo img{
   width:100%;height:100%;object-fit:cover;display:block;position:relative;z-index:0;
 }
-/* Assim que a foto for adicionada, o ícone ilustrativo desaparece sozinho. */
+
 .card__photo:has(img) svg,
 .dgallery__slide:has(img) svg,
 .team__photo:has(img) svg{display:none}
@@ -265,7 +263,7 @@ button{font-family:inherit}
 
 .card__cta{padding:0 20px 20px}
 
-/* ---------- Selo / badge assinatura ---------- */
+
 .seal{
   width:64px;height:64px;border-radius:50%;
   border:2px solid var(--gold-500);
@@ -278,7 +276,7 @@ button{font-family:inherit}
 }
 .seal svg{width:26px;height:26px}
 
-/* ---------- Barra de confiança ---------- */
+
 .trustbar{background:var(--navy-950);border-top:1px solid rgba(255,255,255,.08)}
 .trustbar .container{display:flex;justify-content:space-between;padding:26px 20px;flex-wrap:wrap;gap:20px}
 .trustbar__item{display:flex;align-items:center;gap:12px;color:var(--gray-200)}
@@ -286,8 +284,7 @@ button{font-family:inherit}
 .trustbar__item span{font-size:.76rem;color:var(--gray-400)}
 .trustbar__item svg{width:24px;height:24px;color:var(--gold-400,var(--gold-500))}
 
-/* ---------- Abas de categoria (SEM JavaScript, via #âncora + :target) ---------- */
-/* Funciona clicando nas abas OU chegando de outra página/rodapé com #cat-casa etc. */
+
 .tabs{position:relative}
 .target-hook{position:absolute;top:-120px}
 .tabs__nav{display:flex;gap:8px;flex-wrap:wrap;border-bottom:1px solid var(--gray-200);margin-bottom:30px;padding-bottom:0}
@@ -300,7 +297,7 @@ button{font-family:inherit}
 .tabs__nav a:hover{color:var(--navy-800)}
 .tabs__panel{display:none}
 
-/* painel padrão (Todos) visível até que outra categoria vire :target */
+/* painel padrão*/
 .panel-todos{display:block}
 .panel-casa,.panel-apto,.panel-comercial{display:none}
 .tabs__nav a[href="#cat-todos"]{color:var(--navy-950);border-color:var(--gold-500)}
@@ -325,7 +322,7 @@ button{font-family:inherit}
   font-family:var(--f-mono);font-size:.7rem;color:var(--gray-400);margin-left:6px;
 }
 
-/* ---------- Filtro lateral (checkbox, sem JS) ---------- */
+/*  Filtro lateral  */
 .filterbox{background:var(--gray-50);border:1px solid var(--gray-200);border-radius:var(--radius-m);padding:20px}
 .filterbox h4{font-size:.82rem;text-transform:uppercase;letter-spacing:.05em;color:var(--gray-500);font-family:var(--f-mono);margin-bottom:14px}
 .filterbox fieldset{border:0;padding:0;margin:0 0 18px}
@@ -333,7 +330,7 @@ button{font-family:inherit}
 .filterbox label{display:flex;align-items:center;gap:8px;font-size:.86rem;padding:6px 0;color:var(--gray-700);cursor:pointer}
 .filterbox input[type=checkbox],.filterbox input[type=radio]{accent-color:var(--gold-600);width:16px;height:16px}
 
-/* ---------- Página de listagem: layout ---------- */
+/*  layout  */
 .listing{display:grid;grid-template-columns:260px 1fr;gap:32px;align-items:start}
 .listing.listing--reverse{grid-template-columns:1fr 300px}
 .page-hero{
@@ -346,13 +343,13 @@ button{font-family:inherit}
 .breadcrumb a{color:var(--gold-300)}
 .breadcrumb span{color:var(--gray-400);margin:0 6px}
 
-/* ---------- Detalhe do imóvel ---------- */
+/*  Detalhe do imóvel  */
 .gallery{display:grid;grid-template-columns:2fr 1fr;gap:8px;border-radius:var(--radius-m);overflow:hidden}
 .gallery__main{aspect-ratio:16/11}
 .gallery__side{display:grid;grid-template-rows:1fr 1fr;gap:8px}
 .gallery__side .card__photo,.gallery__main.card__photo{aspect-ratio:auto;height:100%}
 
-/* Galeria com troca de foto SEM JavaScript (radio + :checked) */
+/* Galeria com troca de foto) */
 .dgallery input[type=radio]{position:absolute;opacity:0;pointer-events:none}
 .dgallery__main{position:relative;border-radius:var(--radius-m);overflow:hidden;aspect-ratio:16/10;background:var(--navy-900)}
 .dgallery__slide{position:absolute;inset:0;display:none;aspect-ratio:auto}
@@ -407,7 +404,7 @@ button{font-family:inherit}
 .field input:focus,.field select:focus,.field textarea:focus{border-color:var(--gold-500);background:var(--white)}
 .field textarea{resize:vertical;min-height:110px}
 
-/* Estilo de placeholder para <select> (option value="" disabled selected hidden) */
+/* Estilo de placeholder */
 .field select:required:invalid{color:var(--gray-400)}
 .field select option{color:var(--ink)}
 .field select option[disabled]{color:var(--gray-400)}
@@ -423,7 +420,7 @@ button{font-family:inherit}
 }
 .formnote svg{width:20px;height:20px;color:var(--gold-600);flex-shrink:0}
 
-/* ---------- Timeline / equipe (Sobre) ---------- */
+/*Timeline / equipe */
 .timeline{border-left:2px solid var(--gray-200);padding-left:28px;display:flex;flex-direction:column;gap:30px;margin-left:10px}
 .timeline__item{position:relative}
 .timeline__item::before{
@@ -443,7 +440,7 @@ button{font-family:inherit}
 .team__name{font-weight:700;font-size:.98rem}
 .team__role{font-size:.8rem;color:var(--gray-500);font-family:var(--f-mono)}
 
-/* ---------- CTA final ---------- */
+
 .cta-band{
   background:linear-gradient(120deg,var(--navy-950),var(--navy-700));
   color:var(--white);border-radius:var(--radius-m);
@@ -452,7 +449,7 @@ button{font-family:inherit}
 .cta-band h3{color:var(--white);margin-bottom:6px}
 .cta-band p{color:var(--gray-300);margin:0}
 
-/* ---------- Rodapé ---------- */
+/*  Rodapé */
 .footer{background:var(--navy-950);color:var(--gray-300);padding:56px 0 0}
 .footer__grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:32px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.1)}
 .footer h5{color:var(--white);font-family:var(--f-mono);font-size:.76rem;text-transform:uppercase;letter-spacing:.08em;margin-bottom:16px}
@@ -464,7 +461,7 @@ button{font-family:inherit}
 .footer__brand .brand__tag{color:var(--gray-400)}
 .footer__bottom{display:flex;justify-content:space-between;padding:20px 0;font-size:.78rem;color:var(--gray-500);flex-wrap:wrap;gap:8px}
 
-/* ---------- Utilidades ---------- */
+
 .mt-0{margin-top:0}
 .text-center{text-align:center}
 .badge-gold{
@@ -475,7 +472,7 @@ button{font-family:inherit}
 .divider{height:1px;background:var(--gray-200);margin:40px 0}
 
 /* =========================================================
-   RESPONSIVO — celular é o principal canal, mobile-first cuidado
+   Adaptative / Responsivo
    ========================================================= */
 @media (max-width:1020px){
   .hero__inner{grid-template-columns:1fr}
