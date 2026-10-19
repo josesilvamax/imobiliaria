@@ -406,7 +406,7 @@ button{font-family:inherit}
 
 /* Estilo de placeholder */
 .field select:required:invalid{color:var(--gray-400)}
-.field select option{color:#FFFF}
+.field select option{color:var(--ink)}
 .field select option[disabled]{color:var(--gray-400)}
 ::placeholder{color:var(--gray-400);opacity:1}
 .form-foot{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-top:6px;flex-wrap:wrap}
