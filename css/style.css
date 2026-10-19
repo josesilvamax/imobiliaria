@@ -450,7 +450,7 @@ button{font-family:inherit}
 .cta-band p{color:var(--gray-300);margin:0}
 
 /*  Rodapé */
-.footer{background:var(--navy-950);color:var(--gray-300);padding:56px 0 0}
+.footer{background:var(--white);color:var(--gray-300);padding:56px 0 0}
 .footer__grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:32px;padding-bottom:40px;border-bottom:1px solid var(--white)}
 .footer h5{color:var(--white);font-family:var(--f-mono);font-size:.76rem;text-transform:uppercase;letter-spacing:.08em;margin-bottom:16px}
 .footer li{margin-bottom:10px}
