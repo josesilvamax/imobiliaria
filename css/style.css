@@ -556,3 +556,9 @@ button{font-family:inherit}
   .brand__tag{display:none}
   .hero__stats{gap:16px}
 }
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .nav,.btn,.card,.tabs__nav a,.field input,.field select,.field textarea{transition:none}
+  .card:hover,.btn:active{transform:none}
+}
