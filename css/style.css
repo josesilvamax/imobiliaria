@@ -361,9 +361,11 @@ button{font-family:inherit}
 /* Galeria com troca de foto) */
 .dgallery input[type=radio]{position:absolute;opacity:0;pointer-events:none}
 .dgallery__main{position:relative;border-radius:var(--radius-m);overflow:hidden;aspect-ratio:16/10;background:var(--navy-900)}
-.dgallery__slide{position:absolute;inset:0;display:none;aspect-ratio:auto}
+.dgallery__slide{position:absolute;inset:0;display:none;aspect-ratio:auto;flex-direction:column;gap:8px}
+.dgallery__placeholder,.dgallery__thumbs label span{font-size:.78rem;font-weight:700}
+.dgallery__slide:has(img) .dgallery__placeholder,.dgallery__thumbs label:has(img) span{display:none}
 .dgallery__thumbs{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:8px}
-.dgallery__thumbs label{aspect-ratio:1;border-radius:6px;overflow:hidden;cursor:pointer;border:2px solid transparent;display:block}
+.dgallery__thumbs label{aspect-ratio:1;border-radius:6px;overflow:hidden;cursor:pointer;border:2px solid transparent;display:grid;place-items:center}
 .dgallery__thumbs label .card__photo{aspect-ratio:auto;height:100%;width:100%}
 #dg1:checked ~ .dgallery__main .slide-1,
 #dg2:checked ~ .dgallery__main .slide-2,
