@@ -375,9 +375,11 @@ button{font-family:inherit}
 #dg3:checked ~ .dgallery__thumbs label[for="dg3"],
 #dg4:checked ~ .dgallery__thumbs label[for="dg4"],
 #dg5:checked ~ .dgallery__thumbs label[for="dg5"]{border-color:var(--gold-500)}
-@media (max-width:760px){
-  .dgallery__thumbs{grid-template-columns:repeat(5,1fr)}
-}
+#dg1:focus-visible ~ .dgallery__thumbs label[for="dg1"],
+#dg2:focus-visible ~ .dgallery__thumbs label[for="dg2"],
+#dg3:focus-visible ~ .dgallery__thumbs label[for="dg3"],
+#dg4:focus-visible ~ .dgallery__thumbs label[for="dg4"],
+#dg5:focus-visible ~ .dgallery__thumbs label[for="dg5"]{outline:3px solid var(--navy-900);outline-offset:2px}
 
 .spec-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--gray-200);border:1px solid var(--gray-200);border-radius:var(--radius-m);overflow:hidden;margin:26px 0}
 .spec{background:var(--white);padding:18px;text-align:center}
