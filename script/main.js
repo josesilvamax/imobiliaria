@@ -6,7 +6,15 @@
     document.querySelectorAll(".nav a").forEach(function (link) {
       link.addEventListener("click", function () {
         navToggle.checked = false;
+        navToggle.focus();
       });
+    });
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape" && navToggle.checked) {
+        navToggle.checked = false;
+        navToggle.focus();
+      }
     });
   }
 
