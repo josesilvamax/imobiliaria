@@ -422,6 +422,11 @@ button{font-family:inherit}
 .form-foot small{color:var(--gray-500);font-size:.78rem}
 .consent{display:flex;gap:10px;align-items:flex-start;font-size:.82rem;color:var(--gray-500);margin-bottom:18px}
 .consent input{margin-top:3px}
+.lead-status{
+  margin:14px 0 0;padding:12px 14px;background:var(--gray-50);
+  border:1px solid var(--gray-200);border-radius:var(--radius-s);font-size:.85rem;
+}
+.lead-status a{text-decoration:underline;font-weight:700}
 
 .formnote{
   display:flex;gap:12px;background:var(--gray-50);border:1px solid var(--gray-200);
