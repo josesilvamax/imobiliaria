@@ -142,19 +142,19 @@
           <form class="js-lead-form" action="mailto:seuemail.com.br" method="post" enctype="text/plain" data-intro="Tenho interesse no imóvel Apartamento 3 quartos, Jardim das Flores (Cód. AN-0998)">
             <div class="field" style="margin-bottom:12px">
               <label for="nome">Nome completo</label>
-              <input type="text" id="nome" name="nome" placeholder="Como podemos te chamar" required>
+              <input type="text" id="nome" name="nome" autocomplete="name" placeholder="Como podemos te chamar" required>
             </div>
             <div class="field" style="margin-bottom:12px">
               <label for="tel">Telefone / WhatsApp</label>
-              <input type="tel" id="tel" name="telefone" placeholder="(11) 90000-0000" required>
+              <input type="tel" id="tel" name="telefone" autocomplete="tel" placeholder="(11) 90000-0000" required>
             </div>
             <div class="field" style="margin-bottom:12px">
               <label for="email-int">E-mail</label>
-              <input type="email" id="email-int" name="email" placeholder="voce@email.com">
+              <input type="email" id="email-int" name="email" autocomplete="email" placeholder="voce@email.com">
             </div>
             <div class="field" style="margin-bottom:16px">
               <label for="msg-int">Mensagem <span class="hint">(opcional)</span></label>
-              <textarea id="msg-int" name="mensagem" placeholder="Tenho interesse neste imóvel, gostaria de agendar uma visita.">Tenho interesse neste imóvel (Cód. AN-0998). Podemos agendar uma visita?</textarea>
+              <textarea maxlength="600" id="msg-int" name="mensagem" placeholder="Tenho interesse neste imóvel, gostaria de agendar uma visita.">Tenho interesse neste imóvel (Cód. AN-0998). Podemos agendar uma visita?</textarea>
             </div>
             <button type="submit" class="btn btn-primary btn-block">Tenho interesse — falar com corretor</button>
           </form>

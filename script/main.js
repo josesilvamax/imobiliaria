@@ -31,10 +31,6 @@
     });
   }
 
-  document.querySelectorAll("textarea").forEach(function (area) {
-    area.setAttribute("maxlength", "600");
-  });
-
   var WHATSAPP_NUMERO = "5511940028922";
 
   function textoDoCampo(form, name, rotulo) {
