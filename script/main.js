@@ -74,5 +74,7 @@
       aviso.hidden = false;
       window.open(url, "_blank", "noopener");
     });
+
+    form.hidden = false;
   });
 })();
