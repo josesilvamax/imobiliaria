@@ -304,11 +304,6 @@ button{font-family:inherit}
   font-family:var(--f-mono);letter-spacing:.02em;text-transform:uppercase;font-size:.78rem;
 }
 .tabs__nav a:hover{color:var(--navy-800)}
-.tabs__panel{display:none}
-
-/* painel padrão*/
-.panel-todos{display:block}
-.panel-casa,.panel-apto,.panel-comercial{display:none}
 .tabs__nav a[href="#cat-todos"]{color:var(--navy-950);border-color:var(--gold-500)}
 
 #cat-casa:target ~ .tabs__nav a[href="#cat-todos"],
@@ -319,13 +314,11 @@ button{font-family:inherit}
 #cat-apto:target ~ .tabs__nav a[href="#cat-apto"],
 #cat-comercial:target ~ .tabs__nav a[href="#cat-comercial"]{color:var(--navy-950);border-color:var(--gold-500)}
 
-#cat-casa:target ~ .tabs__panels .panel-todos,
-#cat-apto:target ~ .tabs__panels .panel-todos,
-#cat-comercial:target ~ .tabs__panels .panel-todos{display:none}
+#cat-casa:target ~ .catalog .card:not([data-category="casa"]),
+#cat-apto:target ~ .catalog .card:not([data-category="apto"]),
+#cat-comercial:target ~ .catalog .card:not([data-category="comercial"]){display:none}
 
-#cat-casa:target ~ .tabs__panels .panel-casa{display:block}
-#cat-apto:target ~ .tabs__panels .panel-apto{display:block}
-#cat-comercial:target ~ .tabs__panels .panel-comercial{display:block}
+.catalog__contact{margin:34px 0 0;text-align:center}
 
 .tabs__count{
   font-family:var(--f-mono);font-size:.7rem;color:var(--gray-400);margin-left:6px;
