@@ -10,11 +10,12 @@
 <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
 <div class="topbar">
   <div class="container">
     <div class="topbar__links">
-      <a href="tel:+551140028922">seunumero</a> · <a href="mailto:seuemail.com.br">seuemail.com.br</a>
+      <a href="tel:+551140028922">(11) 4002-8922</a>
     </div>
     <div class="topbar__seal">CRECI-J 24.681 · Atendimento seg–sáb, 8h–19h</div>
   </div>
@@ -30,20 +31,22 @@
       </span>
     </a>
 
-    <input type="checkbox" id="nav-toggle" class="nav-toggle">
-    <nav class="nav">
-      <a href="index.html" class="is-active">Início</a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Menu de navegação" aria-controls="nav-principal">
+    <nav id="nav-principal" class="nav" aria-label="Navegação principal">
+      <a href="index.html" class="is-active" aria-current="page">Início</a>
       <a href="comprar.html">Comprar</a>
       <a href="alugar.html">Alugar</a>
       <a href="anunciar.html">Anunciar meu imóvel</a>
       <a href="sobre.html">Sobre</a>
       <a href="anunciar.html#contato" class="btn btn-outline-navy btn-sm">Fale com um corretor</a>
     </nav>
-    <label for="nav-toggle" class="nav-toggle-btn" aria-label="Abrir menu">
+    <label for="nav-toggle" class="nav-toggle-btn" aria-hidden="true">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
     </label>
   </div>
 </header>
+
+<main id="conteudo" tabindex="-1">
 
 <section class="hero">
   <div class="container hero__inner">
@@ -78,7 +81,7 @@
           <option value="apartamento">Apartamento</option>
           <option value="comercial">Comercial</option>
         </select>
-        <button type="submit" class="btn btn-primary" style="grid-column:1/-1">Buscar imóveis</button>
+        <button type="submit" class="btn btn-primary">Buscar imóveis</button>
       </form>
       <div class="hero__badge-row">
         <span class="mini-seal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3Z"/><path d="M9 12l2 2 4-4"/></svg> Imóveis vistoriados</span>
@@ -124,10 +127,10 @@
 
       <article class="card">
         <span class="card__tab">Venda · Casa</span>
-        <a href="imovel.html" class="card__photo ph-1">
+        <div class="card__photo ph-1">
           <span class="card__status">Novo</span>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v9a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1v-9"/></svg>
-        </a>
+        </div>
         <div class="card__body">
           <div class="card__price">R$ 890.000 <small>Cód. AN-1042</small></div>
           <div class="card__title">Casa térrea com quintal</div>
@@ -138,16 +141,15 @@
             <span>150 m²</span>
           </div>
         </div>
-        <div class="card__cta"><a href="imovel.html" class="btn btn-outline-navy btn-block btn-sm">Ver detalhes</a></div>
+        <div class="card__cta"><a href="https://wa.me/5511940028922?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20o%20im%C3%B3vel%20AN-1042." class="btn btn-outline-navy btn-block btn-sm" aria-label="Consultar no WhatsApp — Casa térrea com quintal (AN-1042)">Consultar no WhatsApp</a></div>
       </article>
 
       <article class="card">
         <span class="card__tab">Venda · Apartamento</span>
-        <a href="imovel.html" class="card__photo ph-2">
+        <div class="card__photo ph-2">
           <span class="card__status">Destaque</span>
-          <img src="images/imoveis/AN-0998-1-fachada.jpg" alt="Apartamento 3 quartos no Jardim das Flores">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M8 7h1M12 7h1M16 7h1M8 11h1M12 11h1M16 11h1M8 15h1M12 15h1M16 15h1"/></svg>
-        </a>
+        </div>
         <div class="card__body">
           <div class="card__price">R$ 620.000 <small>Cód. AN-0998</small></div>
           <div class="card__title">Apartamento 3 quartos, vista livre</div>
@@ -158,14 +160,14 @@
             <span>92 m²</span>
           </div>
         </div>
-        <div class="card__cta"><a href="imovel.html" class="btn btn-outline-navy btn-block btn-sm">Ver detalhes</a></div>
+        <div class="card__cta"><a href="imovel.html" class="btn btn-outline-navy btn-block btn-sm" aria-label="Ver detalhes — Apartamento 3 quartos, vista livre (AN-0998)">Ver detalhes</a></div>
       </article>
 
       <article class="card">
         <span class="card__tab">Aluguel · Comercial</span>
-        <a href="imovel.html" class="card__photo ph-4">
+        <div class="card__photo ph-4">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M10 21v-4h4v4"/></svg>
-        </a>
+        </div>
         <div class="card__body">
           <div class="card__price">R$ 4.900<small>/mês · Cód. AN-0876</small></div>
           <div class="card__title">Sala comercial térrea, 2 ambientes</div>
@@ -176,14 +178,14 @@
             <span>68 m²</span>
           </div>
         </div>
-        <div class="card__cta"><a href="imovel.html" class="btn btn-outline-navy btn-block btn-sm">Ver detalhes</a></div>
+        <div class="card__cta"><a href="https://wa.me/5511940028922?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20o%20im%C3%B3vel%20AN-0876." class="btn btn-outline-navy btn-block btn-sm" aria-label="Consultar no WhatsApp — Sala comercial térrea, 2 ambientes (AN-0876)">Consultar no WhatsApp</a></div>
       </article>
 
       <article class="card">
         <span class="card__tab">Venda · Apartamento</span>
-        <a href="imovel.html" class="card__photo ph-3">
+        <div class="card__photo ph-3">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M8 7h1M12 7h1M16 7h1M8 11h1M12 11h1M16 11h1"/></svg>
-        </a>
+        </div>
         <div class="card__body">
           <div class="card__price">R$ 410.000 <small>Cód. AN-1101</small></div>
           <div class="card__title">Studio mobiliado próximo ao metrô</div>
@@ -194,14 +196,14 @@
             <span>38 m²</span>
           </div>
         </div>
-        <div class="card__cta"><a href="imovel.html" class="btn btn-outline-navy btn-block btn-sm">Ver detalhes</a></div>
+        <div class="card__cta"><a href="https://wa.me/5511940028922?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20o%20im%C3%B3vel%20AN-1101." class="btn btn-outline-navy btn-block btn-sm" aria-label="Consultar no WhatsApp — Studio mobiliado próximo ao metrô (AN-1101)">Consultar no WhatsApp</a></div>
       </article>
 
       <article class="card">
         <span class="card__tab">Aluguel · Casa</span>
-        <a href="imovel.html" class="card__photo ph-5">
+        <div class="card__photo ph-5">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v9a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1v-9"/></svg>
-        </a>
+        </div>
         <div class="card__body">
           <div class="card__price">R$ 2.850<small>/mês · Cód. AN-0954</small></div>
           <div class="card__title">Casa em condomínio fechado</div>
@@ -212,14 +214,14 @@
             <span>110 m²</span>
           </div>
         </div>
-        <div class="card__cta"><a href="imovel.html" class="btn btn-outline-navy btn-block btn-sm">Ver detalhes</a></div>
+        <div class="card__cta"><a href="https://wa.me/5511940028922?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20o%20im%C3%B3vel%20AN-0954." class="btn btn-outline-navy btn-block btn-sm" aria-label="Consultar no WhatsApp — Casa em condomínio fechado (AN-0954)">Consultar no WhatsApp</a></div>
       </article>
 
       <article class="card">
         <span class="card__tab">Venda · Comercial</span>
-        <a href="imovel.html" class="card__photo ph-1">
+        <div class="card__photo ph-1">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M10 21v-4h4v4"/></svg>
-        </a>
+        </div>
         <div class="card__body">
           <div class="card__price">R$ 1.150.000 <small>Cód. AN-0812</small></div>
           <div class="card__title">Galpão logístico com pé-direito alto</div>
@@ -229,7 +231,7 @@
             <span>520 m²</span>
           </div>
         </div>
-        <div class="card__cta"><a href="imovel.html" class="btn btn-outline-navy btn-block btn-sm">Ver detalhes</a></div>
+        <div class="card__cta"><a href="https://wa.me/5511940028922?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20o%20im%C3%B3vel%20AN-0812." class="btn btn-outline-navy btn-block btn-sm" aria-label="Consultar no WhatsApp — Galpão logístico com pé-direito alto (AN-0812)">Consultar no WhatsApp</a></div>
       </article>
 
     </div>
@@ -275,6 +277,8 @@
   </div>
 </section>
 
+</main>
+
 <footer class="footer">
   <div class="container">
     <div class="footer__grid">
@@ -309,9 +313,9 @@
       <div>
         <h5>Contato</h5>
         <ul>
-          <li><a href="tel:+551140028922">seunumero</a></li>
+          <li><a href="tel:+551140028922">(11) 4002-8922</a></li>
           <li><a href="https://wa.me/5511940028922">WhatsApp (11) 94002-8922</a></li>
-          <li><a href="mailto:seuemail.com.br">seuemail.com.br</a></li>
+
           <li>Rua das Palmeiras, 482 — Centro, Sorocaba/SP</li>
         </ul>
       </div>
@@ -323,6 +327,6 @@
   </div>
 </footer>
 
-<script src="js/main.js"></script>
+<script src="../script/main.js"></script>
 </body>
 </html>

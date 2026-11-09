@@ -1,71 +1,30 @@
-# Onde colocar as fotos dos imóveis
+# Fotos dos imóveis e da equipe
 
-Este site usa dois lugares para fotos. Os dois já estão prontos para receber
-imagens reais — o "ícone de casa" e os fundos coloridos são só um placeholder
-que soma automaticamente quando não há foto.
+O catálogo inclui ilustrações para os imóveis sem foto. Crie os diretórios abaixo no mesmo nível de `html/` ao incluir suas imagens reais.
 
     imobiliaria/
+    ├── html/
     └── images/
-        ├── imoveis/   ← fotos das casas/apartamentos/salas (capa + galeria)
-        └── equipe/    ← fotos dos corretores (página Sobre)
+        ├── imoveis/
+        └── equipe/
 
+## Capas dos cards
 
-## 1. Foto de capa dos cards (Início, Comprar, Alugar)
+Dentro do elemento `.card__photo`, insira a imagem antes do SVG e após o selo de destaque, quando houver.
 
-Cada card de imóvel tem um bloco assim no HTML:
+    <img src="../images/imoveis/AN-0998-1-fachada.jpg"
+         alt="Fachada do apartamento no Jardim das Flores"
+         loading="lazy">
 
-    <a href="imovel.html" class="card__photo ph-2">
-      <span class="card__status">Destaque</span>
-      <svg ...>ícone...</svg>
-    </a>
+Mantenha a classe de fundo e o SVG. O CSS esconde a ilustração quando o card contém uma imagem.
 
-Para colocar uma foto real, adicione uma tag <img> logo depois da
-<span class="card__status"> (ou no lugar do ícone, se não houver status):
+## Galeria da ficha
 
-    <a href="imovel.html" class="card__photo ph-2">
-      <span class="card__status">Destaque</span>
-      <img src="images/imoveis/AN-0998-1-fachada.jpg" alt="Apartamento no Jardim das Flores">
-      <svg ...>ícone...</svg>
-    </a>
+Em `html/imovel.html`, adicione cada foto à sua `.dgallery__slide` e use o mesmo arquivo na miniatura correspondente. A foto grande precisa de uma descrição em `alt`. Na miniatura, use `alt=""`, pois o botão de rádio já identifica o ambiente. Preserve o vínculo entre o `id` do rádio e o atributo `for` da miniatura.
 
-Não precisa apagar o <svg> nem a classe "ph-2" — o CSS já esconde o ícone
-sozinho assim que existe uma <img> ali dentro, e a cor de fundo (ph-1 a ph-5)
-continua servindo de reserva enquanto o arquivo da foto não existir.
+## Fotos da equipe
 
-Isso já foi feito como exemplo no card do "Apartamento 3 quartos, vista
-livre" (Cód. AN-0998) na página inicial — veja o arquivo images/imoveis/
-para o nome exato esperado.
-
-
-## 2. Galeria da página de detalhe (imovel.html) — "os pontos da casa"
-
-A página do imóvel mostra 5 fotos: 1 foto grande + 4 miniaturas clicáveis
-(sem JavaScript — é feito com botões de rádio escondidos). Cada uma das 5
-fotos aparece em DOIS lugares no HTML: uma vez em `.dgallery__main` (a foto
-grande) e uma vez em `.dgallery__thumbs` (a miniatura pequena). Use a MESMA
-imagem nos dois.
-
-Sugestão de ordem/nome de arquivo (já aplicada no exemplo do site):
-
-    AN-0998-1-fachada.jpg   → foto de capa / fachada
-    AN-0998-2-sala.jpg      → sala de estar
-    AN-0998-3-quarto.jpg    → quarto principal
-    AN-0998-4-cozinha.jpg   → cozinha
-    AN-0998-5-banheiro.jpg  → banheiro
-
-Troque "AN-0998" pelo código de cada imóvel e os nomes dos cômodos pelo que
-fizer sentido (quintal, área gourmet, escritório, vaga de garagem etc.).
-Pode ter mais ou menos que 5 fotos — basta copiar o padrão de um dos 5 blocos
-`.dgallery__slide` e do `.dgallery__thumbs label` correspondente, ajustando o
-número (dg1, dg2, dg3...) e o `id`/`for` de cada um.
-
-
-## 3. Fotos da equipe (página Sobre)
-
-Mesmo princípio: dentro de cada `<div class="team__photo ph-X">`, adicione
-uma <img src="images/equipe/nome-sobrenome.jpg" alt="Nome do corretor">
-antes do <svg>. O ícone de pessoa some sozinho quando a foto existir.
-
+Em `html/sobre.html`, insira uma imagem em cada `.team__photo` e use um caminho como `../images/equipe/nome-sobrenome.jpg`. Forneça um texto alternativo quando a imagem trouxer informação além do nome exibido no card.
 
 ## Dicas para o site continuar rápido
 

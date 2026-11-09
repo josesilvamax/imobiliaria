@@ -10,10 +10,11 @@
 <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
 <div class="topbar">
   <div class="container">
-    <div class="topbar__links"><a href="tel:+551140028922">seunumero</a> · <a href="mailto:seuemail.com.br">seuemail.com.br</a></div>
+    <div class="topbar__links"><a href="tel:+551140028922">(11) 4002-8922</a></div>
     <div class="topbar__seal">CRECI-J 24.681 · Atendimento seg–sáb, 8h–19h</div>
   </div>
 </div>
@@ -24,18 +25,20 @@
       <span class="brand__mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" style="color:#e3cd94"><circle cx="12" cy="5" r="1.6"/><path d="M12 7v13"/><path d="M6 12H4a8 8 0 0 0 8 9 8 8 0 0 0 8-9h-2"/><path d="M8 9h8"/></svg></span>
       <span class="brand__text"><span class="brand__name">Âncora Imóveis</span><span class="brand__tag">Desde 1998 · sua âncora no mercado</span></span>
     </a>
-    <input type="checkbox" id="nav-toggle" class="nav-toggle">
-    <nav class="nav">
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Menu de navegação" aria-controls="nav-principal">
+    <nav id="nav-principal" class="nav" aria-label="Navegação principal">
       <a href="index.html">Início</a>
       <a href="comprar.html">Comprar</a>
       <a href="alugar.html">Alugar</a>
-      <a href="anunciar.html" class="is-active">Anunciar meu imóvel</a>
+      <a href="anunciar.html" class="is-active" aria-current="page">Anunciar meu imóvel</a>
       <a href="sobre.html">Sobre</a>
       <a href="anunciar.html#contato" class="btn btn-outline-navy btn-sm">Fale com um corretor</a>
     </nav>
-    <label for="nav-toggle" class="nav-toggle-btn" aria-label="Abrir menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></label>
+    <label for="nav-toggle" class="nav-toggle-btn" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></label>
   </div>
 </header>
+
+<main id="conteudo" tabindex="-1">
 
 <section class="page-hero">
   <div class="container">
@@ -76,22 +79,23 @@
         <p>Preencha os dados abaixo — respondemos em até 1 dia útil com a proposta de avaliação e os próximos passos.</p>
 
         <div class="form-card" style="margin-top:24px">
-          <form class="js-lead-form" action="mailto:seuemail.com.br" method="post" enctype="text/plain" data-intro="Novo imóvel para avaliação — formulário do site">
+          <noscript><p>Para enviar seus dados, <a href="https://wa.me/5511940028922">fale com a imobiliária pelo WhatsApp</a>.</p></noscript>
+          <form class="js-lead-form" hidden data-intro="Novo imóvel para avaliação — formulário do site">
             <div class="form-row form-row--2">
               <div class="field">
                 <label for="p-nome">Nome completo</label>
-                <input type="text" id="p-nome" name="nome" placeholder="Seu nome" required>
+                <input type="text" id="p-nome" name="nome" autocomplete="name" placeholder="Seu nome" required>
               </div>
               <div class="field">
                 <label for="p-tel">Telefone / WhatsApp</label>
-                <input type="tel" id="p-tel" name="telefone" placeholder="(11) 90000-0000" required>
+                <input type="tel" id="p-tel" name="telefone" autocomplete="tel" placeholder="(11) 90000-0000" required>
               </div>
             </div>
 
             <div class="form-row form-row--2">
               <div class="field">
                 <label for="p-email">E-mail</label>
-                <input type="email" id="p-email" name="email" placeholder="voce@email.com" required>
+                <input type="email" id="p-email" name="email" autocomplete="email" placeholder="voce@email.com" required>
               </div>
               <div class="field">
                 <label for="p-finalidade">O que deseja fazer?</label>
@@ -134,7 +138,7 @@
 
             <div class="field" style="margin-bottom:16px">
               <label for="p-msg">Detalhes do imóvel <span class="hint">(opcional)</span></label>
-              <textarea id="p-msg" name="mensagem" placeholder="Quartos, vagas, se está alugado, melhor horário para visita, etc."></textarea>
+              <textarea maxlength="600" id="p-msg" name="mensagem" placeholder="Quartos, vagas, se está alugado, melhor horário para visita, etc."></textarea>
             </div>
 
             <div class="consent">
@@ -143,9 +147,10 @@
             </div>
 
             <div class="form-foot">
-              <small>Seus dados são usados apenas para a avaliação e contato — nunca compartilhados com terceiros.</small>
+              <small>Você poderá revisar a mensagem no WhatsApp antes de enviar.</small>
               <button type="submit" class="btn btn-primary">Enviar para avaliação</button>
             </div>
+            <p class="lead-status" hidden>Revise e envie a mensagem no WhatsApp. <a target="_blank" rel="noopener">Abrir a mensagem preparada</a></p>
           </form>
         </div>
       </div>
@@ -172,6 +177,8 @@
   </div>
 </section>
 
+</main>
+
 <footer class="footer">
   <div class="container">
     <div class="footer__grid">
@@ -184,12 +191,12 @@
       </div>
       <div><h5>Navegação</h5><ul><li><a href="comprar.html">Comprar</a></li><li><a href="alugar.html">Alugar</a></li><li><a href="anunciar.html">Anunciar imóvel</a></li><li><a href="sobre.html">Sobre a imobiliária</a></li></ul></div>
       <div><h5>Categorias</h5><ul><li><a href="comprar.html#cat-casa">Casas à venda</a></li><li><a href="comprar.html#cat-apto">Apartamentos à venda</a></li><li><a href="comprar.html#cat-comercial">Salas comerciais</a></li><li><a href="alugar.html">Imóveis para alugar</a></li></ul></div>
-      <div><h5>Contato</h5><ul><li><a href="tel:+551140028922">seunumero</a></li><li><a href="https://wa.me/5511940028922">WhatsApp (11) 94002-8922</a></li><li><a href="mailto:seuemail.com.br">seuemail.com.br</a></li><li>Rua das Palmeiras, 482 — Centro, Sorocaba/SP</li></ul></div>
+      <div><h5>Contato</h5><ul><li><a href="tel:+551140028922">(11) 4002-8922</a></li><li><a href="https://wa.me/5511940028922">WhatsApp (11) 94002-8922</a></li><li>Rua das Palmeiras, 482 — Centro, Sorocaba/SP</li></ul></div>
     </div>
     <div class="footer__bottom"><span>© 2026 Âncora Imóveis. Todos os direitos reservados.</span><span>CRECI-J 24.681-SP</span></div>
   </div>
 </footer>
 
-<script src="js/main.js"></script>
+<script src="../script/main.js"></script>
 </body>
 </html>

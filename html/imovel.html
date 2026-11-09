@@ -10,10 +10,11 @@
 <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
 <div class="topbar">
   <div class="container">
-    <div class="topbar__links"><a href="tel:+551140028922">seunumero</a> · <a href="mailto:seuemail.com.br">seuemail.com.br</a></div>
+    <div class="topbar__links"><a href="tel:+551140028922">(11) 4002-8922</a></div>
     <div class="topbar__seal">CRECI-J 24.681 · Atendimento seg–sáb, 8h–19h</div>
   </div>
 </div>
@@ -24,18 +25,20 @@
       <span class="brand__mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" style="color:#e3cd94"><circle cx="12" cy="5" r="1.6"/><path d="M12 7v13"/><path d="M6 12H4a8 8 0 0 0 8 9 8 8 0 0 0 8-9h-2"/><path d="M8 9h8"/></svg></span>
       <span class="brand__text"><span class="brand__name">Âncora Imóveis</span><span class="brand__tag">Desde 1998 · sua âncora no mercado</span></span>
     </a>
-    <input type="checkbox" id="nav-toggle" class="nav-toggle">
-    <nav class="nav">
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Menu de navegação" aria-controls="nav-principal">
+    <nav id="nav-principal" class="nav" aria-label="Navegação principal">
       <a href="index.html">Início</a>
-      <a href="comprar.html" class="is-active">Comprar</a>
+      <a href="comprar.html" class="is-active" aria-current="location">Comprar</a>
       <a href="alugar.html">Alugar</a>
       <a href="anunciar.html">Anunciar meu imóvel</a>
       <a href="sobre.html">Sobre</a>
       <a href="anunciar.html#contato" class="btn btn-outline-navy btn-sm">Fale com um corretor</a>
     </nav>
-    <label for="nav-toggle" class="nav-toggle-btn" aria-label="Abrir menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></label>
+    <label for="nav-toggle" class="nav-toggle-btn" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></label>
   </div>
 </header>
+
+<main id="conteudo" tabindex="-1">
 
 <div class="container" style="padding-top:20px">
   <div class="breadcrumb"><a href="index.html">Início</a><span>/</span><a href="comprar.html">Comprar</a><span>/</span>Apartamento no Jardim das Flores</div>
@@ -45,42 +48,42 @@
   <div class="container">
 
     <!-- Galeria (sem JavaScript: troca de foto via inputs radio) -->
-    <div class="dgallery">
-      <input placeholder="1" type="radio" name="dg" id="dg1" checked>
-      <input placeholder="2" type="radio" name="dg" id="dg2">
-      <input placeholder="3" type="radio" name="dg" id="dg3">
-      <input placeholder="4" type="radio" name="dg" id="dg4">
-      <input placeholder="5" type="radio" name="dg" id="dg5">
+    <div class="dgallery" role="group" aria-label="Galeria do imóvel">
+      <input aria-label="Fachada" type="radio" name="dg" id="dg1" checked>
+      <input aria-label="Sala" type="radio" name="dg" id="dg2">
+      <input aria-label="Quarto" type="radio" name="dg" id="dg3">
+      <input aria-label="Cozinha" type="radio" name="dg" id="dg4">
+      <input aria-label="Banheiro" type="radio" name="dg" id="dg5">
 
       <div class="dgallery__main">
         <div class="dgallery__slide slide-1 card__photo ph-2"><span class="card__status">Destaque</span>
-          <img src="images/imoveis/AN-0998-1-fachada.jpg" alt="Fachada do prédio do apartamento AN-0998, Jardim das Flores">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" style="width:20%"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M8 7h1M12 7h1M16 7h1M8 11h1M12 11h1M16 11h1"/></svg>
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" style="width:20%"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M8 7h1M12 7h1M16 7h1M8 11h1M12 11h1M16 11h1"/></svg>
+          <span class="dgallery__placeholder">Fachada · Foto indisponível</span>
         </div>
         <div class="dgallery__slide slide-2 card__photo ph-3">
-          <img src="images/imoveis/AN-0998-2-sala.jpg" alt="Sala de estar em dois ambientes com sacada">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" style="width:20%"><path d="M3 18v-6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v6"/><path d="M3 18v2M21 18v2"/></svg>
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" style="width:20%"><path d="M3 18v-6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v6"/><path d="M3 18v2M21 18v2"/></svg>
+          <span class="dgallery__placeholder">Sala · Foto indisponível</span>
         </div>
         <div class="dgallery__slide slide-3 card__photo ph-4">
-          <img src="images/imoveis/AN-0998-3-quarto.jpg" alt="Quarto principal com armário embutido">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" style="width:20%"><rect x="4" y="12" width="16" height="6" rx="2"/></svg>
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" style="width:20%"><rect x="4" y="12" width="16" height="6" rx="2"/></svg>
+          <span class="dgallery__placeholder">Quarto · Foto indisponível</span>
         </div>
         <div class="dgallery__slide slide-4 card__photo ph-5">
-          <img src="images/imoveis/AN-0998-4-cozinha.jpg" alt="Cozinha planejada">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" style="width:20%"><path d="M4 12h16v3a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4v-3Z"/><path d="M7 12V6a2 2 0 0 1 3-1.7"/></svg>
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" style="width:20%"><path d="M4 12h16v3a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4v-3Z"/><path d="M7 12V6a2 2 0 0 1 3-1.7"/></svg>
+          <span class="dgallery__placeholder">Cozinha · Foto indisponível</span>
         </div>
         <div class="dgallery__slide slide-5 card__photo ph-1">
-          <img src="images/imoveis/AN-0998-5-banheiro.jpg" alt="Banheiro social">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" style="width:20%"><path d="M12 21s-7-6.1-7-11.5A7 7 0 0 1 19 9.5C19 14.9 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.3"/></svg>
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" style="width:20%"><path d="M12 21s-7-6.1-7-11.5A7 7 0 0 1 19 9.5C19 14.9 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.3"/></svg>
+          <span class="dgallery__placeholder">Banheiro · Foto indisponível</span>
         </div>
       </div>
 
       <div class="dgallery__thumbs">
-        <label for="dg1" class="card__photo ph-2" style="border-radius:6px"><img src="images/imoveis/AN-0998-1-fachada.jpg" alt=""></label>
-        <label for="dg2" class="card__photo ph-3" style="border-radius:6px"><img src="images/imoveis/AN-0998-2-sala.jpg" alt=""></label>
-        <label for="dg3" class="card__photo ph-4" style="border-radius:6px"><img src="images/imoveis/AN-0998-3-quarto.jpg" alt=""></label>
-        <label for="dg4" class="card__photo ph-5" style="border-radius:6px"><img src="images/imoveis/AN-0998-4-cozinha.jpg" alt=""></label>
-        <label for="dg5" class="card__photo ph-1" style="border-radius:6px"><img src="images/imoveis/AN-0998-5-banheiro.jpg" alt=""></label>
+        <label for="dg1" class="card__photo ph-2" style="border-radius:6px"><span aria-hidden="true">1</span></label>
+        <label for="dg2" class="card__photo ph-3" style="border-radius:6px"><span aria-hidden="true">2</span></label>
+        <label for="dg3" class="card__photo ph-4" style="border-radius:6px"><span aria-hidden="true">3</span></label>
+        <label for="dg4" class="card__photo ph-5" style="border-radius:6px"><span aria-hidden="true">4</span></label>
+        <label for="dg5" class="card__photo ph-1" style="border-radius:6px"><span aria-hidden="true">5</span></label>
       </div>
     </div>
 
@@ -136,24 +139,26 @@
           <div class="card__price">R$ 620.000</div>
           <p style="color:var(--gray-500);font-size:.82rem;margin-bottom:18px">Aceita financiamento · condomínio R$ 480/mês · IPTU R$ 1.900/ano</p>
 
-          <form class="js-lead-form" action="mailto:seuemail.com.br" method="post" enctype="text/plain" data-intro="Tenho interesse no imóvel Apartamento 3 quartos, Jardim das Flores (Cód. AN-0998)">
+          <noscript><p>Para enviar seus dados, <a href="https://wa.me/5511940028922">fale com a imobiliária pelo WhatsApp</a>.</p></noscript>
+          <form class="js-lead-form" hidden data-intro="Tenho interesse no imóvel Apartamento 3 quartos, Jardim das Flores (Cód. AN-0998)">
             <div class="field" style="margin-bottom:12px">
               <label for="nome">Nome completo</label>
-              <input type="text" id="nome" name="nome" placeholder="Como podemos te chamar" required>
+              <input type="text" id="nome" name="nome" autocomplete="name" placeholder="Como podemos te chamar" required>
             </div>
             <div class="field" style="margin-bottom:12px">
               <label for="tel">Telefone / WhatsApp</label>
-              <input type="tel" id="tel" name="telefone" placeholder="(11) 90000-0000" required>
+              <input type="tel" id="tel" name="telefone" autocomplete="tel" placeholder="(11) 90000-0000" required>
             </div>
             <div class="field" style="margin-bottom:12px">
               <label for="email-int">E-mail</label>
-              <input type="email" id="email-int" name="email" placeholder="voce@email.com">
+              <input type="email" id="email-int" name="email" autocomplete="email" placeholder="voce@email.com">
             </div>
             <div class="field" style="margin-bottom:16px">
               <label for="msg-int">Mensagem <span class="hint">(opcional)</span></label>
-              <textarea id="msg-int" name="mensagem" placeholder="Tenho interesse neste imóvel, gostaria de agendar uma visita.">Tenho interesse neste imóvel (Cód. AN-0998). Podemos agendar uma visita?</textarea>
+              <textarea maxlength="600" id="msg-int" name="mensagem" placeholder="Tenho interesse neste imóvel, gostaria de agendar uma visita.">Tenho interesse neste imóvel (Cód. AN-0998). Podemos agendar uma visita?</textarea>
             </div>
             <button type="submit" class="btn btn-primary btn-block">Tenho interesse — falar com corretor</button>
+            <p class="lead-status" hidden>Revise e envie a mensagem no WhatsApp. <a target="_blank" rel="noopener">Abrir a mensagem preparada</a></p>
           </form>
           <p style="text-align:center;font-size:.76rem;color:var(--gray-500);margin:12px 0 0">ou <a href="https://wa.me/5511940028922" style="color:var(--navy-900);font-weight:700">chame no WhatsApp</a></p>
         </div>
@@ -169,40 +174,42 @@
     <div class="grid grid--3">
       <article class="card">
         <span class="card__tab">Venda · Apartamento</span>
-        <a href="imovel.html" class="card__photo ph-3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M8 7h1M12 7h1M16 7h1M8 11h1M12 11h1M16 11h1"/></svg></a>
+        <div class="card__photo ph-3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M8 7h1M12 7h1M16 7h1M8 11h1M12 11h1M16 11h1"/></svg></div>
         <div class="card__body">
           <div class="card__price">R$ 545.000 <small>Cód. AN-0888</small></div>
           <div class="card__title">Apartamento 2 quartos, sacada gourmet</div>
           <div class="card__loc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-6.1-7-11.5A7 7 0 0 1 19 9.5C19 14.9 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.3"/></svg> Éden</div>
           <div class="card__meta"><span>2 qts</span><span>1 vaga</span><span>68 m²</span></div>
         </div>
-        <div class="card__cta"><a href="imovel.html" class="btn btn-outline-navy btn-block btn-sm">Ver detalhes</a></div>
+        <div class="card__cta"><a href="https://wa.me/5511940028922?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20o%20im%C3%B3vel%20AN-0888." class="btn btn-outline-navy btn-block btn-sm" aria-label="Consultar no WhatsApp — Apartamento 2 quartos, sacada gourmet (AN-0888)">Consultar no WhatsApp</a></div>
       </article>
       <article class="card">
         <span class="card__tab">Venda · Apartamento</span>
-        <a href="imovel.html" class="card__photo ph-2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M8 7h1M12 7h1M16 7h1M8 11h1M12 11h1M16 11h1"/></svg></a>
+        <div class="card__photo ph-2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M8 7h1M12 7h1M16 7h1M8 11h1M12 11h1M16 11h1"/></svg></div>
         <div class="card__body">
           <div class="card__price">R$ 410.000 <small>Cód. AN-1101</small></div>
           <div class="card__title">Studio mobiliado próximo ao metrô</div>
           <div class="card__loc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-6.1-7-11.5A7 7 0 0 1 19 9.5C19 14.9 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.3"/></svg> Vila Progresso</div>
           <div class="card__meta"><span>1 qt</span><span>1 vaga</span><span>38 m²</span></div>
         </div>
-        <div class="card__cta"><a href="imovel.html" class="btn btn-outline-navy btn-block btn-sm">Ver detalhes</a></div>
+        <div class="card__cta"><a href="https://wa.me/5511940028922?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20o%20im%C3%B3vel%20AN-1101." class="btn btn-outline-navy btn-block btn-sm" aria-label="Consultar no WhatsApp — Studio mobiliado próximo ao metrô (AN-1101)">Consultar no WhatsApp</a></div>
       </article>
       <article class="card">
         <span class="card__tab">Venda · Casa</span>
-        <a href="imovel.html" class="card__photo ph-1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v9a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1v-9"/></svg></a>
+        <div class="card__photo ph-1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v9a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1v-9"/></svg></div>
         <div class="card__body">
           <div class="card__price">R$ 890.000 <small>Cód. AN-1042</small></div>
           <div class="card__title">Casa térrea com quintal</div>
           <div class="card__loc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-6.1-7-11.5A7 7 0 0 1 19 9.5C19 14.9 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.3"/></svg> Jardim das Acácias</div>
           <div class="card__meta"><span>3 qts</span><span>2 vagas</span><span>150 m²</span></div>
         </div>
-        <div class="card__cta"><a href="imovel.html" class="btn btn-outline-navy btn-block btn-sm">Ver detalhes</a></div>
+        <div class="card__cta"><a href="https://wa.me/5511940028922?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20o%20im%C3%B3vel%20AN-1042." class="btn btn-outline-navy btn-block btn-sm" aria-label="Consultar no WhatsApp — Casa térrea com quintal (AN-1042)">Consultar no WhatsApp</a></div>
       </article>
     </div>
   </div>
 </section>
+
+</main>
 
 <footer class="footer">
   <div class="container">
@@ -216,12 +223,12 @@
       </div>
       <div><h5>Navegação</h5><ul><li><a href="comprar.html">Comprar</a></li><li><a href="alugar.html">Alugar</a></li><li><a href="anunciar.html">Anunciar imóvel</a></li><li><a href="sobre.html">Sobre a imobiliária</a></li></ul></div>
       <div><h5>Categorias</h5><ul><li><a href="comprar.html#cat-casa">Casas à venda</a></li><li><a href="comprar.html#cat-apto">Apartamentos à venda</a></li><li><a href="comprar.html#cat-comercial">Salas comerciais</a></li><li><a href="alugar.html">Imóveis para alugar</a></li></ul></div>
-      <div><h5>Contato</h5><ul><li><a href="tel:+551140028922">seunumero</a></li><li><a href="https://wa.me/5511940028922">WhatsApp (11) 94002-8922</a></li><li><a href="mailto:seuemail.com.br">seuemail.com.br</a></li><li>Rua das Palmeiras, 482 — Centro, Sorocaba/SP</li></ul></div>
+      <div><h5>Contato</h5><ul><li><a href="tel:+551140028922">(11) 4002-8922</a></li><li><a href="https://wa.me/5511940028922">WhatsApp (11) 94002-8922</a></li><li>Rua das Palmeiras, 482 — Centro, Sorocaba/SP</li></ul></div>
     </div>
     <div class="footer__bottom"><span>© 2026 Âncora Imóveis. Todos os direitos reservados.</span><span>CRECI-J 24.681-SP</span></div>
   </div>
 </footer>
 
-<script src="js/main.js"></script>
+<script src="../script/main.js"></script>
 </body>
 </html>
