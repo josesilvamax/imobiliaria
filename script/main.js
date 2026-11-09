@@ -6,7 +6,15 @@
     document.querySelectorAll(".nav a").forEach(function (link) {
       link.addEventListener("click", function () {
         navToggle.checked = false;
+        navToggle.focus();
       });
+    });
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape" && navToggle.checked) {
+        navToggle.checked = false;
+        navToggle.focus();
+      }
     });
   }
 
@@ -22,10 +30,6 @@
       window.location.href = destino + ancora;
     });
   }
-
-  document.querySelectorAll("textarea").forEach(function (area) {
-    area.setAttribute("maxlength", "600");
-  });
 
   var WHATSAPP_NUMERO = "5511940028922";
 
@@ -50,36 +54,27 @@
     return linhas.trim();
   }
 
-  function mostrarConfirmacao(form, mensagemFinal) {
-    var botao = form.querySelector('button[type="submit"]');
-    var textoOriginal = botao ? botao.textContent : "";
-    if (botao) {
-      botao.disabled = true;
-      botao.textContent = "Abrindo o WhatsApp...";
-    }
-    var aviso = document.createElement("p");
-    aviso.textContent = mensagemFinal;
-    aviso.style.cssText = "margin-top:14px;padding:12px 14px;background:#eef7f0;border:1px solid #bfe3c9;border-radius:6px;color:#1f6b3c;font-size:.85rem";
-    form.appendChild(aviso);
-    if (botao) {
-      setTimeout(function () {
-        botao.disabled = false;
-        botao.textContent = textoOriginal;
-      }, 4000);
-    }
-  }
-
   document.querySelectorAll("form.js-lead-form").forEach(function (form) {
+    var aviso = form.querySelector(".lead-status");
+    var link = aviso.querySelector("a");
+
     form.addEventListener("submit", function (e) {
       e.preventDefault();
+      var nome = form.elements.nome;
+      var telefone = form.elements.telefone;
+      nome.value = nome.value.trim();
+      telefone.value = telefone.value.trim();
       if (!form.reportValidity()) return;
 
       var introducao = form.getAttribute("data-intro") || "";
       var mensagem = montarMensagem(form, introducao);
       var url = "https://wa.me/" + WHATSAPP_NUMERO + "?text=" + encodeURIComponent(mensagem);
 
+      link.href = url;
+      aviso.hidden = false;
       window.open(url, "_blank", "noopener");
-      mostrarConfirmacao(form, "Prontinho! Abrimos o WhatsApp em outra aba com sua mensagem pronta para enviar.");
     });
+
+    form.hidden = false;
   });
 })();
